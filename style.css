@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+	padding: 0%;
+	margin: 0%;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10dvh;
+	width: 100dvw;
+	padding-left: 14px;
+	padding-right: 14px;
+	background-color: rgb(150, 156, 214);
+}
+nav ul {
+	list-style-type: none;
+	display: flex;
+	gap: 40px;
+}
+a {
+	text-decoration: none;
+}
+main {
+	height: 90dvh;
+	width: 100dvw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-stuff {
+	height: 90dvh;
+	border-left: 8px solid rgb(255, 255, 255);
+}
+.title {
+	height: 8dvh;
+	width: 75dvw;
+	font-size: 30px;
+	padding-left: 4px;
+	overflow: hidden;
+	outline: none;
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+}
+
+textarea {
+	resize: none;
+	font-size: 18px;
+	width: 75dvw;
+	height: 70dvh;
+	border: none;
+	outline: none;
+	background: #ffffff;
+	padding-top: 4px;
+}
+
+.controls {
+	height: 10dvh;
+	width: 75dvw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.features {
+	width: 60dvw;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-left: 6px;
+}
+
+.features * {
+	width: 60px;
+	height: 60px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.start-stop {
+	width: 15dvw;
+	border-radius: 8px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+	padding: 4px;
+	margin-right: 6px;
+}
+.start-stop * {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+.start {
+	background-color: rgb(6, 165, 6);
+}
+
+.start:hover {
+	background-color: rgb(0, 255, 0);
+	border: 2px solid rgb(47, 223, 24);
+}
+.stop {
+	background-color: rgb(212, 28, 28);
+}
+
+.stop:hover {
+	background-color: rgb(255, 0, 0);
+	border: 2px solid rgb(161, 12, 12);
+}
+
+.side-stuff {
+	width: 25dvw;
+	height: 90dvh;
+	border-bottom: none;
+	border-top: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.side-stuff > iframe {
+	height: 80dvh;
+	width: 24dvw;
+}
