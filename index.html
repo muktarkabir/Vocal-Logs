@@ -4,6 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<script src="index.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/582b9644f7.js"
+			crossorigin="anonymous"></script>
+
 		<title>Vocal-logs</title>
 	</head>
 	<body>
@@ -19,21 +24,32 @@
 		</header>
 		<main>
 			<div class="main-stuff">
-				<div class="title" contenteditable></div>
+				<div class="top">
+					<div class="title" contenteditable></div>
+					<div class="start-stop">
+						<button class="start">
+							<i
+								class="fas fa-microphone-alt"
+								style="
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									font-size: 38px;
+								"></i>
+						</button>
+					</div>
+				</div>
+
 				<hr />
-				<textarea class="words">Stufff&#13;&#10;ffffto do</textarea>
+				<div class="textarea" contenteditable></div>
 				<hr />
 				<div class="controls">
 					<div class="features">
-						<div class="children child1"></div>
-						<div class="children child2"></div>
+						<div class="children child1">New Note</div>
+						<div class="children child2">My notes</div>
 						<div class="children child3"></div>
 						<div class="children child4"></div>
 						<div class="children child5"></div>
-					</div>
-					<div class="start-stop">
-						<button class="start">Start</button>
-						<button class="stop">Pause</button>
 					</div>
 				</div>
 			</div>
