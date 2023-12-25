@@ -48,45 +48,8 @@ main {
 	background-color: rgb(255, 255, 255);
 	display: flex;
 	align-items: center;
-}
-
-.textarea {
-	resize: none;
-	font-size: 22px;
-	width: 75dvw;
-	height: 70dvh;
-	border: none;
-	outline: none;
-	background: #ffffff;
-	padding-top: 4px;
-	overflow-y: scroll;
-	/* letter-spacing: -1px;
-	line-height: 26px;
-	word-spacing: -4px; */
-}
-
-.controls {
-	height: 10dvh;
-	width: 75dvw;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.features {
-	width: 60dvw;
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	gap: 14px;
-	margin-left: 6px;
-}
-
-.features * {
-	width: 60px;
-	height: 60px;
-	border: 1px solid black;
-	cursor: pointer;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .start-stop {
@@ -117,6 +80,46 @@ main {
 	border: 2px solid rgb(161, 12, 12);
 }
 
+.textarea {
+	resize: none;
+	font-size: 22px;
+	width: 75dvw;
+	height: 68dvh;
+	border: none;
+	outline: none;
+	background: #ffffff;
+	padding-top: 4px;
+	overflow-y: scroll;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.controls {
+	height: 10dvh;
+	width: 75dvw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.features {
+	width: 60dvw;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	gap: 35px;
+	margin-left: 6px;
+}
+
+.features * {
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	font-size: 60px;
+}
+.fa-floppy-disk:hover {
+	cursor: pointer;
+}
 .side-stuff {
 	width: 25dvw;
 	height: 90dvh;

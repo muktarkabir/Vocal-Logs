@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Hints</title>
 		<style>
 			::-webkit-scrollbar {
 				width: 10px;
@@ -27,13 +27,20 @@
 			body {
 				overflow-y: scroll;
 				font-size: 20px;
+				font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+					"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+			}
+			.the-commands {
+				width: 100%;
+				background-color: blue;
 			}
 		</style>
 	</head>
 	<body>
 		<main>
+			<h3>How to Use:</h3>
 			<ul>
-				<li>Start by clicking the start button below.</li>
+				<li>Start by clicking the microphone button.</li>
 				<li>Allow access to enable speech recognition.</li>
 				<li>
 					Use the voice-commands available to add punctuations and perform
@@ -41,6 +48,10 @@
 				</li>
 				<li>Happy writing!</li>
 			</ul>
+			<div class="voice-commands">
+				<h3>Voice Commands:</h3>
+				<div class="the-commands">say this</div>
+			</div>
 		</main>
 	</body>
 </html>
