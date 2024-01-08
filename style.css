@@ -4,6 +4,11 @@
 	margin: 0%;
 }
 
+body {
+	font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -15,9 +20,9 @@ header {
 	background-color: rgb(150, 156, 214);
 }
 nav ul {
-	list-style-type: none;
+	list-style: none;
 	display: flex;
-	gap: 40px;
+	gap: 30px;
 }
 a {
 	text-decoration: none;
@@ -48,8 +53,6 @@ main {
 	background-color: rgb(255, 255, 255);
 	display: flex;
 	align-items: center;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .start-stop {
@@ -91,8 +94,6 @@ main {
 	background: #ffffff;
 	padding-top: 4px;
 	overflow-y: scroll;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .controls {
@@ -123,7 +124,7 @@ main {
 }
 .side-stuff {
 	width: 25dvw;
-	height: 90dvh;
+	height: 70dvh;
 	border-bottom: none;
 	border-top: none;
 	display: flex;
@@ -132,7 +133,7 @@ main {
 }
 
 .side-stuff > iframe {
-	height: 80dvh;
+	height: 70dvh;
 	width: 24dvw;
 }
 

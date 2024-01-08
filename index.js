@@ -84,18 +84,44 @@ let downloadButton = document.querySelector(".download-file");
 let span = document.querySelector(".close span");
 
 // When the user clicks on the button, open the modal
-downloadButton.onclick = function () {
+downloadButton.onclick = () => {
 	modal.style.display = "flex";
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+span.onclick = () => {
 	modal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = (event) => {
 	if (event.target == modal) {
 		modal.style.display = "none";
 	}
 };
+
+const downloadAsTxtButton = document.querySelector(".as-txt");
+
+downloadAsTxtButton.addEventListener("click", () => {
+	downloadAsTextFile(titleSpace.textContent, textArea.textContent);
+	modal.style.display = "none";
+});
+
+function downloadAsTextFile(title, content) {
+	const filename = `${title}.txt`;
+	const noteText = `${title}\n\n${content}`;
+	const blob = new Blob([noteText], { type: "text/plain" });
+	const url = URL.createObjectURL(blob);
+
+	const a = document.createElement("a");
+	a.href = url;
+	a.download = filename;
+
+	a.style.display = "none";
+	document.body.appendChild(a);
+
+	a.click();
+
+	URL.revokeObjectURL(url);
+	document.body.removeChild(a);
+}
