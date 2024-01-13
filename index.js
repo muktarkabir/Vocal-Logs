@@ -73,6 +73,20 @@ startButton.addEventListener("click", () => {
 	}
 });
 
+//Copy text to Clipboard
+const copyTextButton = document.querySelector(".copy");
+copyTextButton.addEventListener("click", copyText);
+
+function copyText() {
+	const storage = document.createElement("textarea");
+	storage.value = textArea.textContent;
+	textArea.appendChild(storage);
+	storage.select();
+	storage.setSelectionRange(0, 99999);
+	navigator.clipboard.writeText(storage.value);
+	textArea.removeChild(storage);
+}
+
 //Download Modal Stuff
 // Get the modal
 let modal = document.getElementById("myModal");
