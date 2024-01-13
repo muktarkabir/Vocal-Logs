@@ -125,3 +125,52 @@ function downloadAsTextFile(title, content) {
 	URL.revokeObjectURL(url);
 	document.body.removeChild(a);
 }
+
+const downloadAsDocxButton = document.querySelector(".as-docx");
+
+downloadAsDocxButton.addEventListener("click", () => {
+	downloadAsDocxFile(titleSpace.textContent, textArea.textContent);
+	modal.style.display = "none";
+});
+
+function downloadAsDocxFile(title, content) {
+	const doc = new docx.Document({
+		sections: [
+			{
+				properties: {},
+				children: [
+					new docx.Paragraph({
+						children: [
+							new docx.TextRun({
+								text: title,
+								bold: true,
+							}),
+							new docx.TextRun({
+								break: 1,
+							}),
+
+							new docx.TextRun({
+								text: content,
+							}),
+						],
+					}),
+				],
+			},
+		],
+	});
+
+	docx.Packer.toBlob(doc).then((blob) => {
+		saveAs(blob, `${title}.docx`);
+	});
+}
+
+let textAreaFontSize = window
+	.getComputedStyle(textArea, null)
+	.getPropertyValue("font-size");
+
+const featuresContainer = document.querySelector(".features");
+const newFile = featuresContainer.querySelector(".new-file");
+const folder = featuresContainer.querySelector(".my-files");
+const saveButton = featuresContainer.querySelector(".save");
+const zoomIn = featuresContainer.querySelector(".zoom-in");
+const zoomOut = featuresContainer.querySelector(".zoom-out");

@@ -19,10 +19,20 @@ header {
 	padding-right: 14px;
 	background-color: rgb(150, 156, 214);
 }
+.logo {
+	display: flex;
+	min-width: 30%;
+}
+nav {
+	/* display: flex; */
+	width: 40%;
+}
 nav ul {
 	list-style: none;
 	display: flex;
+	justify-content: flex-end;
 	gap: 30px;
+	border: 2px solid springgreen;
 }
 a {
 	text-decoration: none;
@@ -36,12 +46,12 @@ main {
 
 .main-stuff {
 	height: 90dvh;
-	border-left: 8px solid rgb(255, 255, 255);
 }
 .top {
 	display: flex;
 	width: 75dvw;
 	height: 8dvh;
+	padding-left: 10px;
 }
 .title {
 	height: 8dvh;
@@ -86,7 +96,7 @@ main {
 
 .textarea {
 	resize: none;
-	font-size: 22px;
+	font-size: medium;
 	width: 75dvw;
 	height: 68dvh;
 	border: none;
@@ -94,6 +104,7 @@ main {
 	background: #ffffff;
 	padding-top: 4px;
 	overflow-y: scroll;
+	padding-left: 10px;
 }
 
 .controls {
@@ -105,22 +116,28 @@ main {
 }
 
 .features {
-	width: 60dvw;
-	border-radius: 8px;
+	width: 70%;
+	height: 100%;
 	display: flex;
 	align-items: center;
-	gap: 35px;
-	margin-left: 6px;
+	gap: 5%;
+	padding-left: 6px;
+	font-size: 60px;
 }
 
 .features * {
-	width: 60px;
-	height: 60px;
 	cursor: pointer;
-	font-size: 60px;
 }
-.fa-floppy-disk:hover {
+.download-copy *:hover {
 	cursor: pointer;
+}
+
+.download-copy {
+	display: flex;
+	justify-content: flex-end;
+	gap: 15%;
+	width: 30%;
+	font-size: 60px;
 }
 .side-stuff {
 	width: 25dvw;
@@ -138,14 +155,15 @@ main {
 }
 
 ::-webkit-scrollbar {
-	width: 15px;
+	width: 13px;
 	scrollbar-gutter: stable;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: hsl(270, 4%, 55%);
+	/* background-color: hsl(270, 4%, 55%); */
 	border-radius: 100dvw;
 	margin-block: 2em;
+	border: 1px solid black;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -220,4 +238,56 @@ main {
 	background-color: rgba(0, 0, 0, 0.1);
 	outline: 1px solid grey;
 	cursor: pointer;
+}
+.as-docx:active,
+.as-txt:active {
+	background-color: rgba(0, 0, 0, 0.1);
+	outline: 1px solid grey;
+}
+
+@media screen and (max-width: 660px) {
+	.side-stuff {
+		display: none;
+	}
+	.textarea {
+		width: 100dvw;
+	}
+	.top {
+		width: 100dvw;
+		justify-content: space-between;
+		padding-right: 15px;
+	}
+	.controls {
+		width: 100dvw;
+	}
+	.title {
+		font-size: 20px;
+	}
+	.features {
+		justify-content: space-between;
+	}
+	.features * {
+		font-size: 40px;
+	}
+	.download-copy {
+		font-size: 40px;
+	}
+	.modal-content {
+		width: auto;
+	}
+}
+@media screen and (max-width: 332px) {
+	.features * {
+		font-size: 30px;
+	}
+	.download-copy {
+		font-size: 30px;
+	}
+	.title {
+		font-size: 15px;
+	}
+}
+body {
+	width: 100%;
+	height: 100%;
 }
