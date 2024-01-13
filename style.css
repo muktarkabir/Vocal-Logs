@@ -96,7 +96,7 @@ main {
 
 .textarea {
 	resize: none;
-	font-size: medium;
+	font-size: 22px;
 	width: 75dvw;
 	height: 68dvh;
 	border: none;

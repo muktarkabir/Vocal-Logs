@@ -164,13 +164,25 @@ function downloadAsDocxFile(title, content) {
 	});
 }
 
-let textAreaFontSize = window
-	.getComputedStyle(textArea, null)
-	.getPropertyValue("font-size");
-
 const featuresContainer = document.querySelector(".features");
 const newFile = featuresContainer.querySelector(".new-file");
 const folder = featuresContainer.querySelector(".my-files");
 const saveButton = featuresContainer.querySelector(".save");
-const zoomIn = featuresContainer.querySelector(".zoom-in");
-const zoomOut = featuresContainer.querySelector(".zoom-out");
+const zoomInButton = featuresContainer.querySelector(".zoom-in");
+const zoomOutButton = featuresContainer.querySelector(".zoom-out");
+
+//Features for increasing and decrasing font size
+let fontSizePixels = 22;
+zoomInButton.addEventListener("click", () => {
+	if (fontSizePixels < 46) {
+		fontSizePixels += 2;
+	}
+	textArea.style.fontSize = `${fontSizePixels}px`;
+});
+
+zoomOutButton.addEventListener("click", () => {
+	if (fontSizePixels > 12) {
+		fontSizePixels -= 2;
+	}
+	textArea.style.fontSize = `${fontSizePixels}px`;
+});
