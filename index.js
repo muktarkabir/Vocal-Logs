@@ -200,3 +200,11 @@ zoomOutButton.addEventListener("click", () => {
 	}
 	textArea.style.fontSize = `${fontSizePixels}px`;
 });
+
+newFile.addEventListener("click", () => {
+	titleSpace.textContent = "";
+	if (titleSpace.textContent == "") {
+		titleSpace.textContent = new Date().toUTCString();
+	}
+	textArea.textContent = "";
+});

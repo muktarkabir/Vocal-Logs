@@ -17,11 +17,14 @@ header {
 	width: 100dvw;
 	padding-left: 14px;
 	padding-right: 14px;
-	background-color: rgb(150, 156, 214);
+	background-color: #1f2937;
 }
 .logo {
 	display: flex;
 	min-width: 30%;
+	font-size: 2rem;
+	font-weight: 700;
+	color: rgb(238, 177, 10);
 }
 nav {
 	/* display: flex; */
@@ -32,7 +35,6 @@ nav ul {
 	display: flex;
 	justify-content: flex-end;
 	gap: 30px;
-	border: 2px solid springgreen;
 }
 a {
 	text-decoration: none;
@@ -116,9 +118,10 @@ main {
 }
 
 .features {
-	width: 70%;
+	width: 50%;
 	height: 100%;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	gap: 5%;
 	padding-left: 6px;
